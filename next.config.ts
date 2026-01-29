@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import path from "node:path";
+
+const LOADER = path.resolve(__dirname, "src/visual-edits/component-tagger-loader.js");
 
 const nextConfig: NextConfig = {
   images: {
@@ -13,12 +16,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-    eslint: {
-      ignoreDuringBuilds: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  turbopack: {
+    rules: {
+      "*.{jsx,tsx}": {
+        loaders: [LOADER],
+      },
     },
-    typescript: {
-      ignoreBuildErrors: true,
-    },
+  },
 };
 
 export default nextConfig;
+
