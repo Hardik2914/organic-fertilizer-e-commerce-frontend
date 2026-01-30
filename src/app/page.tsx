@@ -134,7 +134,7 @@ export default function Home() {
       <section className="py-40 bg-[#2b1f14] text-white overflow-hidden relative">
         <motion.div
   style={{
-    x: useTransform(smoothProgress, [0.3, 0.7], [200, -200]),
+    x: useTransform(smoothProgress, [0.3, 0.7], [120, -120]),
     transform: "translateZ(0)",
   }}
   className="absolute top-0 left-0 w-full h-full opacity-[0.06] pointer-events-none whitespace-nowrap text-[30vh] font-black uppercase flex items-center will-change-transform"
