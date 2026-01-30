@@ -97,7 +97,7 @@ export default function Home() {
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-green-700 mb-8 block">Our Commitment</span>
               <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-tight mb-8 uppercase">
                 Cultivating a <br />
-                <span className="text-green-800 italic font-serif uppercase tracking-normal">greener</span> future
+                <span className="text-green-800 font-serif uppercase tracking-normal">greener</span> future
               </h2>
               <p className="text-zinc-600 text-lg leading-relaxed mb-10">
                 Erganic Farms is a leading manufacturer of organic fertilisers, specialising in high-grade vermicompost. With a commitment to sustainability and quality, we combine natural processes with modern manufacturing standards to support healthier soils and higher yields.
