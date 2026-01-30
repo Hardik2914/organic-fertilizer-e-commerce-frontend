@@ -27,10 +27,14 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? "bg-white/90 backdrop-blur-xl py-4 shadow-[0_1px_0_0_rgba(0,0,0,0.05)]" : "bg-transparent py-8"
-      }`}
-    >
+  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    isScrolled
+      ? "bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-400/90 backdrop-blur-xl py-4 shadow-lg"
+      : "bg-gradient-to-r from-orange-500/70 via-amber-400/60 to-yellow-300/50 py-8"
+  }`}
+>
+
+
       <nav className="container mx-auto px-6 flex items-center justify-between">
         {/* Left Side: Navigation Links (Desktop) */}
         <div className="flex-1 hidden md:flex items-center gap-10">
