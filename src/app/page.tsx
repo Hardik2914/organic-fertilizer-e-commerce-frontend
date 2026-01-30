@@ -104,15 +104,14 @@ export default function Home() {
               </p>
               <div className="grid grid-cols-2 gap-8">
                 <div>
-                  <h4 className="text-3xl font-black text-zinc-900 mb-2">100%</h4>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Natural</p>
+                  <h4 className="text-2xl font-black text-zinc-900 mb-2">100%</h4>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Organic</p>
                 </div>
                 <div>
-                  <h4 className="text-3xl font-black text-zinc-900 mb-2">Eco Friendly</h4>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Conscious Practices</p>
+                  <h4 className="text-2xl font-black text-zinc-900 mb-2">Eco Friendly</h4>
                 </div>
                 <div>
-                  <h4 className="text-3xl font-black text-zinc-900 mb-2">Nutrient-rich</h4>
+                  <h4 className="text-2xl font-black text-zinc-900 mb-2">Nutrient-rich</h4>
                 </div>
               </div>
             </div>
