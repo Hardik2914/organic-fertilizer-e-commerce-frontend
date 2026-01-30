@@ -59,7 +59,7 @@ export default function Home() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               className="text-[12vw] md:text-[9vw] font-black tracking-[-0.06em] lineage-[0.8] text-zinc-900 mb-12 uppercase"
             >
-              Soil <span className="text-green-800 font-serif tracking-normal uppercase">FOR</span><br />
+              Soil <span className="text-green-800 italic font-serif tracking-normal uppercase">FOR</span><br />
               the <span className="relative">Soul<motion.span 
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
@@ -97,7 +97,7 @@ export default function Home() {
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-green-700 mb-8 block">Our Commitment</span>
               <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-tight mb-8 uppercase">
                 Cultivating a <br />
-                <span className="text-green-800 font-serif uppercase tracking-normal">greener</span> future
+                <span className="text-green-800 italic font-serif uppercase tracking-normal">greener</span> future
               </h2>
               <p className="text-zinc-600 text-lg leading-relaxed mb-10">
                 Erganic Farms is a leading manufacturer of organic fertilisers, specialising in high-grade vermicompost. With a commitment to sustainability and quality, we combine natural processes with modern manufacturing standards to support healthier soils and higher yields.
@@ -132,12 +132,16 @@ export default function Home() {
 
       {/* Featured Product Section */}
       <section className="py-40 bg-[#2b1f14] text-white overflow-hidden relative">
-        <motion.div 
-          style={{ x: useTransform(smoothProgress, [0.3, 0.7], [200, -200]) }}
-          className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none whitespace-nowrap text-[30vh] font-black uppercase flex items-center"
-        >
-          VERMICOMPOST VERMICOMPOST VERMICOMPOST
-        </motion.div>
+        <motion.div
+  style={{
+    x: useTransform(smoothProgress, [0.3, 0.7], [200, -200]),
+    transform: "translateZ(0)",
+  }}
+  className="absolute top-0 left-0 w-full h-full opacity-[0.06] pointer-events-none whitespace-nowrap text-[30vh] font-black uppercase flex items-center will-change-transform"
+>
+  VERMICOMPOST VERMICOMPOST VERMICOMPOST
+</motion.div>
+
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-24">
