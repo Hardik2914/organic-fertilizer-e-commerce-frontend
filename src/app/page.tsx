@@ -97,7 +97,7 @@ export default function Home() {
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-green-700 mb-8 block">Our Commitment</span>
               <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-tight mb-8 uppercase">
                 Cultivating a <br />
-                <span className="text-green-800 italic font-serif lowercase tracking-normal">greener</span> future
+                <span className="text-green-800 italic font-serif uppercase tracking-normal">greener</span> future
               </h2>
               <p className="text-zinc-600 text-lg leading-relaxed mb-10">
                 Erganic Farms is a leading manufacturer of organic fertilisers, specialising in high-grade vermicompost. With a commitment to sustainability and quality, we combine natural processes with modern manufacturing standards to support healthier soils and higher yields.
@@ -131,7 +131,7 @@ export default function Home() {
       </section>
 
       {/* Featured Product Section */}
-      <section className="py-40 bg-zinc-900 text-white overflow-hidden relative">
+      <section className="py-40 bg-[#2b1f14] text-white overflow-hidden relative">
         <motion.div 
           style={{ x: useTransform(smoothProgress, [0.3, 0.7], [200, -200]) }}
           className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none whitespace-nowrap text-[30vh] font-black uppercase flex items-center"
@@ -145,7 +145,7 @@ export default function Home() {
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-green-400 mb-8 block">Product Spotlight</span>
               <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-10 leading-[0.9]">
                 PREMIUM <br />
-                <span className="text-green-400 italic font-serif lowercase tracking-normal">vermi</span><br />
+                <span className="text-green-400 font-serif uppercase tracking-normal">vermi</span><br />
                 COMPOST
               </h2>
               <p className="text-zinc-400 text-lg mb-12 leading-relaxed max-w-lg">
@@ -169,7 +169,7 @@ export default function Home() {
                   className="object-contain drop-shadow-[0_35px_35px_rgba(255,255,255,0.1)]"
                 />
               </motion.div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-green-500/20 blur-[120px] rounded-full" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#7a4a2e]/30 blur-[120px] blur-[120px] rounded-full" />
             </div>
           </div>
         </div>
@@ -186,7 +186,7 @@ export default function Home() {
           >
             <h2 className="text-4xl md:text-8xl font-black tracking-tighter mb-12 leading-[0.85] uppercase">
               Join the <br />
-              <span className="text-green-800 italic font-serif lowercase tracking-normal">organic</span><br />
+              <span className="text-green-800 font-serif uppercase tracking-normal">organic</span><br />
               movement
             </h2>
             <p className="text-zinc-500 text-xl mb-16 max-w-2xl mx-auto font-medium">
