@@ -80,9 +80,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-zinc-500 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium leading-relaxed"
+              className="mt-8 text-zinc-500 text-base md:text-lg max-w-2xl mx-auto mb-12 font-medium leading-relaxed"
             >
-              At Erganic Farms, we manufacture premium-quality organic fertilisers with a strong focus on scientifically processed vermicompost.
+              At Erganic Farms, we manufacture premium-quality organic fertilisers with a strong focus on scientifically processed vermicompost. Produced at our state-of-the-art facility, our vermicompost is rich in essential nutrients, beneficial microbes, and organic matter that improve soil structure, boost crop productivity, and promote sustainable agriculture. We follow strict quality standards and eco-conscious practices to ensure consistency, purity, and performance in every batch. Trusted by farmers, landscapers, and agri-businesses, Erganic Farms delivers reliable organic solutions designed for both domestic and international markets.
             </motion.p>
           </div>
         </div>
@@ -92,7 +92,6 @@ export default function Home() {
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
         >
-          <span className="text-[9px] font-bold uppercase tracking-[0.4em] text-zinc-400 rotate-90 origin-left translate-x-1">Scroll</span>
           <div className="w-px h-12 bg-gradient-to-b from-zinc-200 to-transparent"></div>
         </motion.div>
       </section>
