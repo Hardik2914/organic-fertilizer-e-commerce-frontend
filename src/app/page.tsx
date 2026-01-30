@@ -54,19 +54,34 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center">
             
             <motion.h1
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[12vw] md:text-[9vw] font-black tracking-[-0.06em] lineage-[0.8] text-zinc-900 mb-12 uppercase"
-            >
-              Nurturing <span className="text-amber-700  font-serif tracking-normal uppercase">Soil,</span><br />
-              Cultavating <span className="relative">life<motion.span 
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ delay: 0.8, duration: 1 }}
-                className="absolute bottom-4 left-0 h-[0.1em] bg-green-800/20 -z-10"
-              /></span>
-            </motion.h1>
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+  className="text-[12vw] md:text-[9vw] font-black tracking-[-0.06em] leading-[0.8] text-zinc-900 mb-12 uppercase"
+>
+  {/* Line 1 */}
+  <span className="block whitespace-nowrap">
+    Nurturing{" "}
+    <span className="text-amber-700 font-serif tracking-normal uppercase">
+      Soil,
+    </span>
+  </span>
+
+  {/* Line 2 */}
+  <span className="block">
+    Cultivating{" "}
+    <span className="relative inline-block">
+      life
+      <motion.span
+        initial={{ width: 0 }}
+        animate={{ width: "100%" }}
+        transition={{ delay: 0.8, duration: 1 }}
+        className="absolute bottom-1 left-0 h-[0.1em] bg-green-800/20 -z-10"
+      />
+    </span>
+  </span>
+</motion.h1>
+
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
