@@ -59,7 +59,7 @@ export default function Home() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               className="text-[12vw] md:text-[9vw] font-black tracking-[-0.06em] lineage-[0.8] text-zinc-900 mb-12 uppercase"
             >
-              Soil <span className="text-green-800 italic font-serif tracking-normal uppercase">FOR</span><br />
+              Soil <span className="text-green-800 font-serif tracking-normal uppercase">FOR</span><br />
               the <span className="relative">Soul<motion.span 
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
