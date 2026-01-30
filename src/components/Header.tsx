@@ -27,16 +27,14 @@ const Header = () => {
 
   return (
     <header
-  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-    isScrolled
-      ? "bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-400/90 backdrop-blur-xl py-4 shadow-lg"
-      : "bg-gradient-to-r from-orange-500/70 via-amber-400/60 to-yellow-300/50 py-8"
-  }`}
->
-
-
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-400/90 backdrop-blur-xl py-2 shadow-lg"
+          : "bg-gradient-to-r from-orange-500/70 via-amber-400/60 to-yellow-300/50 py-4"
+      }`}
+    >
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        {/* Left Side: Navigation Links (Desktop) */}
+        {/* Left Links */}
         <div className="flex-1 hidden md:flex items-center gap-10">
           {navLinks.slice(0, 2).map((link) => (
             <Link
@@ -54,7 +52,7 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Center: Logo */}
+        {/* Logo */}
         <Link href="/" className="flex-shrink-0 group">
           <motion.div
             initial={{ opacity: 0, y: -10 }}
@@ -66,13 +64,13 @@ const Header = () => {
               alt="Erganic Farms Logo"
               width={200}
               height={150}
-              className="h-16 md:h-20 w-auto object-contain transition-transform group-hover:scale-105"
               priority
+              className="h-14 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
             />
           </motion.div>
         </Link>
 
-        {/* Right Side: Navigation Links & Icons (Desktop) */}
+        {/* Right Links & Icons */}
         <div className="flex-1 flex items-center justify-end gap-8">
           <div className="hidden md:flex items-center gap-10 mr-10">
             {navLinks.slice(2).map((link) => (
@@ -90,19 +88,19 @@ const Header = () => {
               </Link>
             ))}
           </div>
-          
+
           <div className="flex items-center gap-2">
-            <button className="p-2.5 hover:bg-zinc-50 rounded-full transition-colors group">
-              <Search size={18} className="group-hover:scale-110 transition-transform" />
+            <button className="p-2 hover:bg-zinc-50 rounded-full transition-colors">
+              <Search size={18} />
             </button>
-            <button className="p-2.5 hover:bg-zinc-50 rounded-full transition-colors group relative">
-              <ShoppingBag size={18} className="group-hover:scale-110 transition-transform" />
-              <span className="absolute top-1.5 right-1.5 bg-green-700 text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-bold border-2 border-white">
+            <button className="p-2 hover:bg-zinc-50 rounded-full transition-colors relative">
+              <ShoppingBag size={18} />
+              <span className="absolute top-1 right-1 bg-green-700 text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-bold border-2 border-white">
                 0
               </span>
             </button>
             <button
-              className="md:hidden p-2.5 hover:bg-zinc-50 rounded-full transition-colors"
+              className="md:hidden p-2 hover:bg-zinc-50 rounded-full transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -118,7 +116,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="absolute top-full left-0 right-0 bg-white border-t border-zinc-100 overflow-hidden md:hidden shadow-2xl shadow-green-900/10"
+            className="absolute top-full left-0 right-0 bg-white border-t border-zinc-100 md:hidden shadow-xl"
           >
             <div className="p-8 flex flex-col gap-6">
               {navLinks.map((link, idx) => (
@@ -131,7 +129,7 @@ const Header = () => {
                   <Link
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-2xl font-black tracking-tighter uppercase hover:text-green-700 transition-colors"
+                    className="text-2xl font-black uppercase hover:text-green-700 transition-colors"
                   >
                     {link.name}
                   </Link>
