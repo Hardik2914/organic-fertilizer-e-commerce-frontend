@@ -5,10 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { ShoppingBag, Menu, X, Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,9 +21,11 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Navigation Links
   const navLinks = [
-    { name: "Shop", href: "/products" },
-    { name: "Our Story", href: "/about" },
+    ...(pathname !== "/" ? [{ name: "Home", href: "/" }] : []),
+    { name: "Products", href: "/products" },
+    { name: "About us", href: "/about" },
     { name: "Process", href: "/#process" },
     { name: "Sustainability", href: "/#sustainability" },
   ];
