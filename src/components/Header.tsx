@@ -26,8 +26,9 @@ const Header = () => {
     ...(pathname !== "/" ? [{ name: "Home", href: "/" }] : []),
     { name: "Products", href: "/products" },
     { name: "About us", href: "/about" },
-    { name: "Process", href: "/#process" },
-    { name: "Sustainability", href: "/#sustainability" },
+    { name: "Contact us", href: "/#process" },
+    { name: "Join us", href: "/#sustainability" },
+    { name: "Consultancy Services", href: "/#sustainability" },
   ];
 
   return (
