@@ -206,14 +206,6 @@ export default function Home() {
               Trusted by farmers, landscapers, and agri-businesses worldwide.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-              <div className="text-left p-8 bg-zinc-50 rounded-[2rem] border border-zinc-100 flex-1 w-full">
-                <h4 className="text-xs font-bold uppercase tracking-widest text-green-800 mb-4">Domestic</h4>
-                <p className="text-sm text-zinc-500 leading-relaxed">Serving farmers and gardeners across the nation with purity and performance.</p>
-              </div>
-              <div className="text-left p-8 bg-zinc-50 rounded-[2rem] border border-zinc-100 flex-1 w-full">
-                <h4 className="text-xs font-bold uppercase tracking-widest text-green-800 mb-4">International</h4>
-                <p className="text-sm text-zinc-500 leading-relaxed">Reliable organic solutions designed for global export and sustainable scale.</p>
-              </div>
             </div>
           </motion.div>
         </div>
