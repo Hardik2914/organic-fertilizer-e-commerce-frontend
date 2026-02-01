@@ -34,50 +34,34 @@ const Header = () => {
       }`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        {/* Left Links */}
-        <div className="flex-1 hidden md:flex items-center gap-10">
-          {navLinks.slice(0, 2).map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="group relative text-[10px] font-bold tracking-[0.25em] uppercase text-zinc-900 overflow-hidden"
+
+        {/* Left Side: Logo + Navigation */}
+        <div className="flex items-center gap-10">
+
+          {/* Logo */}
+          <Link href="/" className="flex-shrink-0 group">
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
             >
-              <span className="block transition-transform duration-300 group-hover:-translate-y-full">
-                {link.name}
-              </span>
-              <span className="absolute top-0 left-0 block transition-transform duration-300 translate-y-full group-hover:translate-y-0 text-green-700">
-                {link.name}
-              </span>
-            </Link>
-          ))}
-        </div>
+              <Image
+                src="/logo.png"
+                alt="Erganic Farms Logo"
+                width={160}
+                height={80}
+                priority
+                className="h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105"
+              />
+            </motion.div>
+          </Link>
 
-        {/* Logo */}
-        <Link href="/" className="flex-shrink-0 group">
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="flex flex-col items-center"
-          >
-            <Image
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/303dbf0b-474d-4bc9-acc6-ea926004f8ee/WhatsApp-Image-2026-01-29-at-7.09.22-PM-1769709098802.jpeg?width=800&height=800&resize=contain"
-              alt="Erganic Farms Logo"
-              width={200}
-              height={150}
-              priority
-              className="h-14 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
-            />
-          </motion.div>
-        </Link>
-
-        {/* Right Links & Icons */}
-        <div className="flex-1 flex items-center justify-end gap-8">
-          <div className="hidden md:flex items-center gap-10 mr-10">
-            {navLinks.slice(2).map((link) => (
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="group relative text-[10px] font-bold tracking-[0.25em] uppercase text-zinc-900 overflow-hidden"
+                className="group relative text-[11px] font-bold tracking-[0.25em] uppercase text-zinc-900 overflow-hidden"
               >
                 <span className="block transition-transform duration-300 group-hover:-translate-y-full">
                   {link.name}
@@ -88,24 +72,27 @@ const Header = () => {
               </Link>
             ))}
           </div>
+        </div>
 
-          <div className="flex items-center gap-2">
-            <button className="p-2 hover:bg-zinc-50 rounded-full transition-colors">
-              <Search size={18} />
-            </button>
-            <button className="p-2 hover:bg-zinc-50 rounded-full transition-colors relative">
-              <ShoppingBag size={18} />
-              <span className="absolute top-1 right-1 bg-green-700 text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-bold border-2 border-white">
-                0
-              </span>
-            </button>
-            <button
-              className="md:hidden p-2 hover:bg-zinc-50 rounded-full transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
-          </div>
+        {/* Right Icons */}
+        <div className="flex items-center gap-2">
+          <button className="p-2 hover:bg-zinc-50 rounded-full transition-colors">
+            <Search size={18} />
+          </button>
+
+          <button className="p-2 hover:bg-zinc-50 rounded-full transition-colors relative">
+            <ShoppingBag size={18} />
+            <span className="absolute top-1 right-1 bg-green-700 text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-bold border-2 border-white">
+              0
+            </span>
+          </button>
+
+          <button
+            className="md:hidden p-2 hover:bg-zinc-50 rounded-full transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
       </nav>
 
