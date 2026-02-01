@@ -21,7 +21,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Navigation Links
   const navLinks = [
     ...(pathname !== "/" ? [{ name: "Home", href: "/" }] : []),
     { name: "Products", href: "/products" },
@@ -35,16 +34,16 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-400/90 backdrop-blur-xl py-2 shadow-lg"
-          : "bg-gradient-to-r from-orange-500/70 via-amber-400/60 to-yellow-300/50 py-4"
+          ? "bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-400/90 backdrop-blur-xl py-3 shadow-lg"
+          : "bg-gradient-to-r from-orange-500/70 via-amber-400/60 to-yellow-300/50 py-5"
       }`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
 
-        {/* Left Side: Logo + Navigation */}
+        {/* Left: Logo + Navigation */}
         <div className="flex items-center gap-10">
 
-          {/* Logo */}
+          {/* Bigger Logo */}
           <Link href="/" className="flex-shrink-0 group">
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -53,10 +52,10 @@ const Header = () => {
               <Image
                 src="/logo.png"
                 alt="Erganic Farms Logo"
-                width={160}
-                height={80}
+                width={240}
+                height={120}
                 priority
-                className="h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105"
+                className="h-16 md:h-20 w-auto object-contain transition-transform group-hover:scale-105"
               />
             </motion.div>
           </Link>
