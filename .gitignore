@@ -40,3 +40,7 @@ next-env.d.ts
 # markdown files
 *.md
 
+# environment metadata
+.orchids/
+
+
