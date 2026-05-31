@@ -38,10 +38,16 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400 mb-8">Navigation</h4>
             <ul className="space-y-4">
-              {["Shop All", "Our Story", "The Process", "Sustainability", "Journal"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-sm font-bold text-zinc-900 hover:text-green-700 transition-colors flex items-center group">
-                    {item}
+              {[
+                { name: "Shop All", href: "/products" },
+                { name: "Our Story", href: "/about" },
+                { name: "The Process", href: "/#process" },
+                { name: "Sustainability", href: "/#sustainability" },
+                { name: "Journal", href: "/#journal" }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-sm font-bold text-zinc-900 hover:text-green-700 transition-colors flex items-center group">
+                    {item.name}
                     <ArrowUpRight size={14} className="opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all ml-1" />
                   </Link>
                 </li>
@@ -53,10 +59,16 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400 mb-8">Support</h4>
             <ul className="space-y-4">
-              {["Help Center", "Shipping", "Returns", "Contact Us", "Wholesale"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-sm font-bold text-zinc-900 hover:text-green-700 transition-colors">
-                    {item}
+              {[
+                { name: "Help Center", href: "/#help" },
+                { name: "Shipping", href: "/#shipping" },
+                { name: "Returns", href: "/#returns" },
+                { name: "Contact Us", href: "/contact" },
+                { name: "Wholesale", href: "/contact" }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-sm font-bold text-zinc-900 hover:text-green-700 transition-colors">
+                    {item.name}
                   </Link>
                 </li>
               ))}

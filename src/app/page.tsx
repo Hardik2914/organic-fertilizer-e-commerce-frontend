@@ -7,6 +7,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowRight, Leaf } from "lucide-react";
+import { products } from "@/data/products";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -27,7 +28,7 @@ export default function Home() {
   const leaf2Y = useTransform(smoothProgress, [0, 1], [0, -800]);
   const leaf2Rotate = useTransform(smoothProgress, [0, 1], [0, -120]);
 
-  const productImg = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/matt-copy-front.jpg-resized-1769707932273.jpeg?width=800&height=800&resize=contain";
+  const productImg = products[0].image;
 
   return (
     <div ref={containerRef} className="relative min-h-screen bg-white text-zinc-900 overflow-x-hidden selection:bg-green-100 selection:text-green-900">

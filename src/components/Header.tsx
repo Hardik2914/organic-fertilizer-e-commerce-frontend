@@ -6,12 +6,14 @@ import Image from "next/image";
 import { ShoppingBag, Menu, X, Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { useCart } from "@/context/CartContext";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const pathname = usePathname();
+  const { totalItems } = useCart();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +27,7 @@ const Header = () => {
     ...(pathname !== "/" ? [{ name: "Home", href: "/" }] : []),
     { name: "Products", href: "/products" },
     { name: "About us", href: "/about" },
-    { name: "Contact us", href: "/#process" },
+    { name: "Contact us", href: "/contact" },
     { name: "Join us", href: "/#sustainability" },
     { name: "Consultancy Services", href: "/#sustainability" },
   ];
@@ -85,12 +87,12 @@ const Header = () => {
             <Search size={18} />
           </button>
 
-          <button className="p-2 hover:bg-zinc-50 rounded-full transition-colors relative">
+          <Link href="/cart" className="p-2 hover:bg-zinc-50 rounded-full transition-colors relative block">
             <ShoppingBag size={18} />
             <span className="absolute top-1 right-1 bg-green-700 text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-bold border-2 border-white">
-              0
+              {totalItems}
             </span>
-          </button>
+          </Link>
 
           <button
             className="md:hidden p-2 hover:bg-zinc-50 rounded-full transition-colors"
